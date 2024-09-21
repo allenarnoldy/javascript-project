@@ -5,20 +5,17 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
     let employeesArray = [];
-    let keepgoing = true;
+    let looping = true;
 
-    while (keepgoing) {
+    while (looping) {
         var firstName = prompt('Please enter First Name:')
         var lastName = prompt('Please enter Last Name:');
         var salary = prompt('Please enter employees salary:');
 
-        var employee = {
-            firstName,
-            lastName,
-            salary
-        };
+        var employee = {firstName, lastName, salary};
+
         employeesArray.push(employee);
-        keepgoing = confirm('Do you want to continue:');
+        looping = confirm('Do you want to continue:');
     }
     return employeesArray;
 };
